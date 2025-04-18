@@ -1,0 +1,31 @@
+@import url(../../web/css/_variables.less);
+
+.block {
+    .card {
+        background: @white-80;
+
+        .modal-content {
+
+            .input-field {
+                display: flex;
+                flex-direction: column;
+                margin: 8px 0; 
+            }
+
+            .input-field.priority {
+                #priority {
+                    padding: 8px;
+                    border-radius: 8px;
+                    border-color: @gray-40;
+                    color: @gray-80;
+                    outline: @gray-40;
+                } 
+            }
+        }
+
+        .action.primary {
+            width: 100%;
+            margin: 16px 0;
+        }
+    }
+}

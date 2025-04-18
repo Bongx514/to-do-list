@@ -1,0 +1,44 @@
+@import url(../../web/css/_variables.less);
+
+.section {
+    .maincontent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+        margin: 0 auto;
+        height: 100vh;
+
+       .container {
+            padding-top: 100px;
+
+            .add-list-block {
+                width: 100%;
+
+                label {
+                    display: block;
+                    font-size: 18px;
+                    color: @white-100;
+                    margin: 12px 0;
+                }
+
+                .input-field.add-list {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    input {
+                        margin-right: 8px;
+                    }
+
+                    button {
+                        width: 150px;
+                    }
+                }
+
+                app-list-component {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

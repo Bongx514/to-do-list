@@ -1,0 +1,20 @@
+@import url(../../web/css/_variables.less);
+
+.to-do-list {
+    position: relative;
+    width: 100%;
+    margin: 32px 0;
+    border: 1px solid @gray-20;
+
+    .list {
+        list-style: decimal;
+        padding: 16px;
+        width: 85%;
+
+        .list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        } 
+    }
+}

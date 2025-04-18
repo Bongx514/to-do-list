@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(src/app/web/css/_variables.less);
+
+body {
+    background: @navy-40;
+}
+
+label {
+    font-size: 16px;
+    color: @gray-60;
+    margin-bottom: 5px;
+}
+
+.text-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid @gray-40;
+    border-radius: 4px;
+    font-size: 16px;
+    color: @black-100;
+    
+    &:focus {
+        border-color: @blue-80;
+        outline: none;
+        box-shadow: 0 0 5px @blue-60;
+    }
+}
+
+.card {
+    background-color: @white-100;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px @gray-40;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    
+    h2 {
+        font-size: 24px;
+        color: @black-100;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        font-size: 16px;
+        color: @gray-60;
+    }
+}
+
+button {
+    background-color: @blue-100;
+    color: @white-100;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: @blue-80;
+    }
+    
+    &:active {
+        background-color: @blue-60;
+    }
+}
+
+.modal-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
