@@ -1,12 +1,13 @@
 <div class="block">
-    <div class="card">
-        <div class="modal-title">
+    <div class="card modal">
+     <form action="">
+           <div class="modal-title">
             <h1 class="title">Create New Ticket</h1>
         </div>
         <div class="modal-content">
             <div class="input-field title">
                 <label for="title">Title</label>
-                <input type="text" class="text-input" id="title" placeholder="Title will appear here" disabled/>
+                <input type="text" class="text-input" id="title" placeholder="" disabled/>
             </div>
             <div class="input-field project-name">
                 <label for="project-name">Project Name</label>
@@ -24,14 +25,15 @@
             <div class="input-field priority">
                 <label for="priority">Priority</label>
                 <select id="priority">
-                    <option value="">Select priority</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
+                    <option *ngFor="let priority of priorities" 
+                            value="{{priority.value}}">
+                            {{priority.label}}
+                    </option>
                 </select>
             </div>
         </div>
+     </form>
 
-        <button class="action primary">Confirm</button>
+        <button type="submit" class="action primary confirm">Confirm</button>
     </div>
 </div>

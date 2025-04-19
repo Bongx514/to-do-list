@@ -4,8 +4,8 @@
             <div class="add-list-block">
                 <label for="">{{label}}</label>
                 <div class="input-field add-list">
-                    <input type="text" class="text-input" id="input-field" placeholder="Add title here" />
-                    <button class="add-btn" type="button">Add</button>
+                    <input type="text" class="text-input" placeholder="Add title here" id="taskTitle" #taskTitleRef minlength="3" />
+                    <button class="add-btn" type="button" (click)="createTask()">Add</button>
                 </div>
             </div>
 
@@ -16,6 +16,6 @@
     </div>
 </section>
 
-<div class="modal-block">
+<div class="modal-block" id="modal-block">
     <app-popup-modal></app-popup-modal>
 </div>

@@ -10,4 +10,19 @@ import { PopupModalComponent } from "../../components/popup-modal/popup-modal.co
 })
 export class HomepageComponent {
   label = 'Add new task here...';
+
+  createTask() {
+    var tasktitle = document.getElementById('taskTitle') as HTMLInputElement,
+        modal = document.getElementById('modal-block') as HTMLDivElement;
+    
+    if (tasktitle.value == '' || tasktitle.value.length < 2) {
+      alert('Please enter a task title');
+      return;
+    } else if (tasktitle.value.length > 2) {
+      this.label = tasktitle.value;
+      console.log(this.label);
+      tasktitle.value = '';
+      modal.style.display = 'flex';
+    }
+  }
 }
